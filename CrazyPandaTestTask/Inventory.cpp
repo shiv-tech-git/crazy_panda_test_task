@@ -1,7 +1,7 @@
 #include "Inventory.h"
 #include <iostream>
 
-void Inventory::addItem(const ItemInterface* item) {
+void Inventory::addItem(std::shared_ptr<const ItemInterface> item) {
 	this->items.push_back(item);
 }
 

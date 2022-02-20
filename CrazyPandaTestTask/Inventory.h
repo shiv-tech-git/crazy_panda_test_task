@@ -2,12 +2,13 @@
 
 #include "ItemInterface.h"
 #include <vector>
+#include <memory>
 
 class Inventory {
 public:
-	void addItem(const ItemInterface* item);
+	void addItem(std::shared_ptr<const ItemInterface> item);
 	void getInfo();
-	std::vector<const ItemInterface*> items;
+	std::vector<std::shared_ptr<const ItemInterface> > items;
 
 protected:
 };
