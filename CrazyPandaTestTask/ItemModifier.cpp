@@ -4,7 +4,7 @@
 #include "Item.h"
 #include <string>
 
-std::shared_ptr<const ItemInterface> ItemModifier::tryApplyBaff(std::shared_ptr<const ItemInterface> item, std::string name, BuffType type, double buff_value, ItemFilter& filter) {
+std::shared_ptr<const ItemInterface> ItemModifier::tryApplyModifier(std::shared_ptr<const ItemInterface> item, std::string name, BuffType type, double buff_value, ItemFilter& filter) {
 	std::string logs = "";
 	if (filter.check(item, logs)) {
 		return std::shared_ptr<const ItemInterface>(new ItemModifier(item, name, type, buff_value));

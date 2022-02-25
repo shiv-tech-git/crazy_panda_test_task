@@ -11,7 +11,7 @@ enum BuffType {DamageBuff, ProtectionBuff, SpeedBuff};
 class ItemModifier: public ItemInterface {
 
 public:
-	static std::shared_ptr<const ItemInterface> tryApplyBaff(std::shared_ptr<const ItemInterface> item, std::string name, BuffType type, double buff_value, ItemFilter& filter);
+	static std::shared_ptr<const ItemInterface> tryApplyModifier(std::shared_ptr<const ItemInterface> item, std::string name, BuffType type, double buff_value, ItemFilter& filter);
 	std::string getId() const  override;
 	ItemRarity getRarity() const override;
 	ItemType getType() const override;

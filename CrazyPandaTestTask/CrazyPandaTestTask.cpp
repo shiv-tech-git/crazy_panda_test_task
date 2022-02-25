@@ -54,9 +54,9 @@ int main()
 	});
 
 	for (auto it = inventory.items.begin(); it != inventory.items.end(); it++) {
-		*it = ItemModifier::tryApplyBaff(*it, "eagle_eye", DamageBuff, 10, eagle_eye_filter);
-		*it = ItemModifier::tryApplyBaff(*it, "donatium_steel", ProtectionBuff, 15, donatium_steel_filter);
-		*it = ItemModifier::tryApplyBaff(*it, "rage_drink", SpeedBuff, 0.4, rage_drink_filter);
+		*it = ItemModifier::tryApplyModifier(*it, "eagle_eye", DamageBuff, 10, eagle_eye_filter);
+		*it = ItemModifier::tryApplyModifier(*it, "donatium_steel", ProtectionBuff, 15, donatium_steel_filter);
+		*it = ItemModifier::tryApplyModifier(*it, "rage_drink", SpeedBuff, 0.4, rage_drink_filter);
 	}
 
 	inventory.getInfo();
